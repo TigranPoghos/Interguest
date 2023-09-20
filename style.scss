@@ -72,13 +72,18 @@ body {
             flex-direction: column;
             top: 0;
             left: 0;
+            z-index: 100;
         }
     }
 }
 
 .burger {
     &__ul {
+        height: calc(100vh - 86px);
+
         &-item {
+            display: flex;
+            align-items: center;
             background-color: #394B64;
             color: #fff;
             font-family: 'Dorsa';
@@ -88,8 +93,10 @@ body {
             line-height: normal;
             letter-spacing: 10px;
             text-transform: uppercase;
-            padding: 17px 30px 3px 30px;
+            padding: 0 30px;
             border-top: 1px solid #fff;
+            height: 25%;
+            box-sizing: border-box;
     
             &:hover {
                 background: #E9896B;
@@ -102,7 +109,7 @@ body {
         margin-left: auto;
         border: none;
         background-color: transparent;
-        padding: 21px 30px 21px 0;
+        padding: 21px 30px 21px 30px;
         cursor: pointer;
     }
 }
@@ -147,7 +154,7 @@ body {
     background: #EBF0FE;
 
     &__row {
-        padding: 99px 186px 78px 186px;
+        padding: 99px 186px 183px 186px;
         position: relative;
     }
 
@@ -162,7 +169,7 @@ body {
         letter-spacing: 0.56px;
         text-transform: uppercase;
         max-width: 322px;
-        right: 216px;
+        right: 186px;
     }
 
     &__elipse {
@@ -174,5 +181,210 @@ body {
         background-image: url(../image/ComfortHolidays.png);
         margin-left: auto;
         margin-right: auto;
+
+        &-bord {
+            position: absolute;
+            bottom: 151px;
+            left: 550px;
+        }
+    }
+
+    &__book {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 340px;
+        top: 692px;
+        width: 210px;
+        height: 210px;
+    
+        & svg:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        & svg:nth-child(2) {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        &-text {
+            position: relative;
+            z-index: 1;
+            color: #FFF;
+            text-align: center;
+            font-family: 'Dorsa';
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.form {
+    background: #EBF0FE;
+    border-top: 1px solid #293A50;
+    border-bottom: 1px solid #293A50;
+
+    &__rectangle {
+        width: 25%;
+        padding: 36px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        &:first-child {
+            margin-left: -30px;
+        }
+
+        &:last-child {
+            margin-right: -30px;
+        }
+
+        &-text {
+            color: #293A50;
+            font-family: 'Roboto Condensed';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 143.187%;
+            letter-spacing: 0.96px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        & + & {
+            border-left: 1px solid #293A50;;
+        }
+
+        & svg:first-child {
+            display: none;
+        }
+
+        &-user {
+            width: 30px;
+            height: 32px;
+        }
+
+        &:hover {
+            background: #E9896B;
+            flex-direction: row-reverse;
+
+            & svg:first-child {
+                display: block;
+            }
+
+            & svg:nth-child(2) {
+                display: none;
+            }
+
+            & svg:nth-child(4) {
+                display: none;
+            }
+
+            & .form__rectangle-text {
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.books {
+    background-color: #394B64;
+
+    &__container {
+        padding: 0;
+        position: relative;
+    }
+
+    &__item {
+        width: 25%;
+        box-sizing: border-box;
+        padding: 578px 30px 8px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        & + & {
+            border-left: 1px solid white;
+        }
+
+        &-text {
+            color: #FFF;
+            font-family: 'Dorsa';
+            font-size: 100px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+
+        &:first-child:hover .books__first-img {
+            display: block;
+        }
+
+        &:nth-child(2):hover .books__second-img {
+            display: block;
+        }
+
+        &:nth-child(3):hover .books__third-img {
+            display: block;
+        }
+
+        &:last-child:hover .books__fourth-img {
+            display: block;
+        }
+    }
+
+    &__first-img {
+        display: none;
+        object-fit: cover;
+        width: 100vw;
+        height: 800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    &__second-img {
+        display: none;
+        object-fit: cover;
+        width: 100vw;
+        height: 800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    &__third-img {
+        display: none;
+        object-fit: cover;
+        width: 100vw;
+        height: 800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    &__fourth-img {
+        display: none;
+        object-fit: cover;
+        width: 100vw;
+        height: 800px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
 }
