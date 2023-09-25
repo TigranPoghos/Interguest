@@ -262,6 +262,12 @@ body {
             bottom: 151px;
             left: 550px;
         }
+
+        &-line {
+            position: absolute;
+            bottom: 0;
+            left: 930px;
+        }
     }
 
     &__book {

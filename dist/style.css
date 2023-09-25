@@ -238,6 +238,11 @@ body {
   bottom: 151px;
   left: 550px;
 }
+.information__elipse-line {
+  position: absolute;
+  bottom: 0;
+  left: 930px;
+}
 .information__book {
   display: flex;
   align-items: center;
