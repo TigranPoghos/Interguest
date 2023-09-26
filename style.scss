@@ -262,6 +262,12 @@ body {
             bottom: 151px;
             left: 550px;
         }
+
+        &-line {
+            position: absolute;
+            bottom: 0;
+            left: 930px;
+        }
     }
 
     &__book {
@@ -307,6 +313,56 @@ body {
     border-top: 1px solid #293A50;
     border-bottom: 1px solid #293A50;
 
+    &__body {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+
+        &-block {
+            display: flex;
+            justify-content: space-between;
+            padding: 21px 23px 21px 31px;
+            align-items: center;
+            background: #293A50;
+            flex-shrink: 0;
+
+            & + &{
+                border-top: 1px solid #FFF;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+
+            & span:first-child {
+                color: #FFF;
+                font-family: 'Roboto Condensed';
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 143.187%;
+                letter-spacing: 0.96px;
+                text-transform: uppercase;
+            }
+
+            & span:last-child {
+                color: #E9896B;
+                font-family: 'Roboto Condensed';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 143.187%;
+                letter-spacing: 0.56px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
     &__rectangle {
         width: 25%;
         padding: 36px 30px;
@@ -314,6 +370,12 @@ body {
         align-items: center;
         justify-content: space-between;
         gap: 30px;
+        color: #293A50;
+        position: relative;
+
+        &-svg {
+            fill: #293A50;
+        }
 
         &:first-child {
             margin-left: -30px;
@@ -321,10 +383,15 @@ body {
 
         &:last-child {
             margin-right: -30px;
+            background: #E9896B;
+            color: #fff;
+
+            &:hover {
+                background: #293A50;
+            }
         }
 
         &-text {
-            color: #293A50;
             font-family: 'Roboto Condensed';
             font-size: 24px;
             font-style: normal;
@@ -339,33 +406,102 @@ body {
             border-left: 1px solid #293A50;;
         }
 
-        & svg:first-child {
-            display: none;
-        }
-
         &-user {
             width: 30px;
             height: 32px;
         }
 
-        &:hover {
-            background: #E9896B;
-            flex-direction: row-reverse;
+        &:first-child:hover &-svg {
+            transform: rotate(180deg);
+            fill: #E9896B;
+        }
 
-            & svg:first-child {
-                display: block;
+        &:nth-child(2):hover &-svg {
+            transform: rotate(180deg);
+            fill: #E9896B;
+        }
+
+        &:nth-child(3):hover &-svg {
+            transform: rotate(180deg);
+            fill: #E9896B;
+        }
+
+        &:nth-child(3):hover .form__body{
+            display: flex;
+        }
+        
+        &:last-child:hover .form__book {
+            display: flex;
+        }
+    }
+
+    &__book {
+        flex-direction: column;
+        width: 1920px;
+        position: absolute;
+        left: -1441px;
+        top: 100%;
+        background-color: #FFF;
+        z-index: 10;
+        display: none;
+
+        &-category {
+            display: flex;
+            justify-content: space-between;
+            padding: 22px 30px;
+            align-items: center;
+
+            & + & {
+                border-top: 1px solid #293A50;
             }
 
-            & svg:nth-child(2) {
-                display: none;
+            &:hover {
+                background-color: #E9896B;
             }
 
-            & svg:nth-child(4) {
-                display: none;
-            }
-
-            & .form__rectangle-text {
+            &:hover .form__book-text span:first-child {
                 color: #FFF;
+            }
+
+            &:hover .form__book-text span:last-child {
+                color: #293A50;
+            }
+
+            &:hover .form__book-svg {
+                fill: #FFF;
+                transform: rotate(270deg);
+            }
+        }
+
+        &-svg {
+            fill: #293A50;
+        }
+
+        &-text {
+            display: flex;
+            gap: 9px;
+
+            & span:first-child {
+                color: #293A50;
+                font-family: 'Dorsa';
+                font-size: 100px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+            }
+
+            & span:last-child {
+                color: #F26A3F;
+                font-family: 'Roboto Condensed';
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 143.187%;
+                letter-spacing: 0.96px;
+                text-transform: uppercase;
+                margin-top: 7px;
             }
         }
     }
@@ -427,7 +563,7 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 100;
+        z-index: 1;
     }
 
     &__second-img {
@@ -499,9 +635,79 @@ body {
             margin-left: -30px;
             margin-right: -30px;
             box-sizing: border-box;
+            position: relative;
+
+            &:hover {
+                background-color: #E9896B;
+                color: #FFF;
+            }
 
             &:last-child {
                 border-bottom: 1px solid #293A50;
+            }
+
+            & img {
+                display: none;
+            }
+
+            &1 {
+                position: absolute;
+                left: 1035px;
+                top: -100px;
+            }
+
+            &:hover &1 {
+                display: block;
+            }
+
+            &2 {
+                position: absolute;
+                left: 1027px;
+                top: -42px;
+            }
+
+            &:hover &2 {
+                display: block;
+            }
+
+            &3 {
+                position: absolute;
+                left: 583px;
+                top: -203px;
+            }
+
+            &:hover &3 {
+                display: block;
+            }
+
+            &4 {
+                position: absolute;
+                left: 1247px;
+                top: -235px;
+            }
+
+            &:hover &4 {
+                display: block;
+            }
+
+            &5 {
+                position: absolute;
+                left: 620px;
+                top: -89px;
+            }
+
+            &:hover &5 {
+                display: block;
+            }
+
+            &6 {
+                position: absolute;
+                left: 1241px;
+                top: -270px;
+            }
+
+            &:hover &6 {
+                display: block;
             }
         }
     }
@@ -509,6 +715,7 @@ body {
 
 .gallery {
     background: #E9EEFC;
+    overflow: hidden;
 
     &__row {
         flex-direction: column;
@@ -554,4 +761,55 @@ body {
         padding-top: 60px;
         padding-bottom: 150px;
     }
+}
+
+.quantity_inner * {
+    box-sizing: border-box;    
+}    
+.quantity_inner {
+    display: flex;
+    justify-content: center;
+}        
+.quantity_inner .bt_minus,
+.quantity_inner .bt_plus{
+    color: #FFF;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 40px;
+    border: 1px solid #FFF;
+    background: #293A50;
+    cursor: pointer;
+    outline: 0;
+}
+.quantity_inner .quantity {
+    text-align: center;
+    font-size: 24px;
+    color: #FFF;
+    font-family: 'Roboto Condensed';
+    background: #293A50;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.187%;
+    letter-spacing: 0.96px;
+    padding: 0;
+    border: none;
+}
+.quantity_inner .bt_minus svg,
+.quantity_inner .bt_plus svg {
+    stroke: #FFF;
+    stroke-width: 2;
+    transition: 0.5s;
+    margin: 10.6px;
+}    
+.quantity_inner .bt_minus:hover svg,
+.quantity_inner .bt_plus:hover svg {
+    stroke: #FFF;
+}
+.quantity_inner .bt_minus svg {
+    stroke: rgba(white,.4);
+}
+.quantity_inner .bt_minus {
+    border: 1px solid rgba(white,.4);
 }
