@@ -56,12 +56,13 @@ body {
     }
 
     &__burger {
-        &:hover .header__burger-body {
-            display: flex;
-        }
-
         &-head {
             position: relative;
+            fill: #293A50;
+
+            &:hover {
+                fill: #E9896B;
+            }
         }
 
         &-body {
@@ -78,6 +79,12 @@ body {
 }
 
 .burger {
+    &__jsBody {
+        &.active {
+            display: flex;
+        }
+    }
+
     &__ul {
         height: calc(100vh - 86px);
 
@@ -111,6 +118,14 @@ body {
         background-color: transparent;
         padding: 21px 30px 21px 30px;
         cursor: pointer;
+        
+        & svg {
+            fill: white;
+
+            &:hover {
+                fill: #E9896B;
+            }
+        }
     }
 }
 
@@ -207,8 +222,8 @@ body {
 
 .holidaywh {
     position: absolute;
-    top: 458px;
-    left: 992px;
+    top: 359px;
+    left: 411px;
     z-index: 1;
 }
 
@@ -220,9 +235,9 @@ body {
 
 .comfortwh {
     position: absolute;
-    right: 993px;
-    top: 155px;
+    top: 55px;
     z-index: 1;
+    left: -426px;
 }
 
 .information {
@@ -256,6 +271,8 @@ body {
         background-image: url(../image/ComfortHolidays.png);
         margin-left: auto;
         margin-right: auto;
+        overflow: hidden;
+        position: relative;
 
         &-bord {
             position: absolute;
@@ -322,6 +339,10 @@ body {
         width: 100%;
         z-index: 2;
 
+        &.active {
+            display: flex;
+        }
+
         &-block {
             display: flex;
             justify-content: space-between;
@@ -386,7 +407,7 @@ body {
             background: #E9896B;
             color: #fff;
 
-            &:hover {
+            &.active {
                 background: #293A50;
             }
         }
@@ -420,18 +441,12 @@ body {
             transform: rotate(180deg);
             fill: #E9896B;
         }
-
-        &:nth-child(3):hover &-svg {
-            transform: rotate(180deg);
-            fill: #E9896B;
-        }
-
-        &:nth-child(3):hover .form__body{
-            display: flex;
-        }
         
-        &:last-child:hover .form__book {
-            display: flex;
+        &:nth-child(3) {
+            &.active .form__rectangle-svg {
+                transform: rotate(180deg);
+                fill: #E9896B;
+            }
         }
     }
 
@@ -444,6 +459,10 @@ body {
         background-color: #FFF;
         z-index: 10;
         display: none;
+
+        &.active {
+            display: flex;
+        }
 
         &-category {
             display: flex;
@@ -649,6 +668,7 @@ body {
             & img {
                 display: none;
                 z-index: 1;
+                pointer-events: none;
             }
 
             &1 {

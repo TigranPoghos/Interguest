@@ -54,11 +54,12 @@ body {
   align-items: center;
   padding: 21px 0;
 }
-.header__burger:hover .header__burger-body {
-  display: flex;
-}
 .header__burger-head {
   position: relative;
+  fill: #293A50;
+}
+.header__burger-head:hover {
+  fill: #E9896B;
 }
 .header__burger-body {
   position: fixed;
@@ -71,6 +72,9 @@ body {
   z-index: 100;
 }
 
+.burger__jsBody.active {
+  display: flex;
+}
 .burger__ul {
   height: calc(100vh - 86px);
 }
@@ -101,6 +105,12 @@ body {
   background-color: transparent;
   padding: 21px 30px 21px 30px;
   cursor: pointer;
+}
+.burger__svg svg {
+  fill: white;
+}
+.burger__svg svg:hover {
+  fill: #E9896B;
 }
 
 .footer {
@@ -185,8 +195,8 @@ body {
 
 .holidaywh {
   position: absolute;
-  top: 458px;
-  left: 992px;
+  top: 359px;
+  left: 411px;
   z-index: 1;
 }
 
@@ -198,9 +208,9 @@ body {
 
 .comfortwh {
   position: absolute;
-  right: 993px;
-  top: 155px;
+  top: 55px;
   z-index: 1;
+  left: -426px;
 }
 
 .information {
@@ -232,6 +242,8 @@ body {
   background-image: url(../image/ComfortHolidays.png);
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
+  position: relative;
 }
 .information__elipse-bord {
   position: absolute;
@@ -291,6 +303,9 @@ body {
   width: 100%;
   z-index: 2;
 }
+.form__body.active {
+  display: flex;
+}
 .form__body-block {
   display: flex;
   justify-content: space-between;
@@ -347,7 +362,7 @@ body {
   background: #E9896B;
   color: #fff;
 }
-.form__rectangle:last-child:hover {
+.form__rectangle:last-child.active {
   background: #293A50;
 }
 .form__rectangle-text {
@@ -375,15 +390,9 @@ body {
   transform: rotate(180deg);
   fill: #E9896B;
 }
-.form__rectangle:nth-child(3):hover .form__rectangle-svg {
+.form__rectangle:nth-child(3).active .form__rectangle-svg {
   transform: rotate(180deg);
   fill: #E9896B;
-}
-.form__rectangle:nth-child(3):hover .form__body {
-  display: flex;
-}
-.form__rectangle:last-child:hover .form__book {
-  display: flex;
 }
 .form__book {
   flex-direction: column;
@@ -394,6 +403,9 @@ body {
   background-color: #FFF;
   z-index: 10;
   display: none;
+}
+.form__book.active {
+  display: flex;
 }
 .form__book-category {
   display: flex;
@@ -571,6 +583,7 @@ body {
 .services__ul-item img {
   display: none;
   z-index: 1;
+  pointer-events: none;
 }
 .services__ul-item1 {
   position: absolute;
