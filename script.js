@@ -23,7 +23,10 @@ $('.quantity_inner .quantity').bind("change keyup input click", function() {
     if (this.value > parseInt($(this).data('max-count'))) {
         this.value = parseInt($(this).data('max-count'))
     }    
-});    
+}); 
+
+
+
 
 const burger__js = document.querySelector('.burger__js')
 const burger__jsBody = document.querySelector('.burger__jsBody')
@@ -35,22 +38,34 @@ burger__svg.addEventListener('click', function(){
     burger__jsBody.classList.toggle('active')
 })
 
+
+
+
 const rectangle__js4 = document.querySelector('.rectangle__js4')
 const form__jsBook = document.querySelector('.form__jsBook')
 rectangle__js4.addEventListener('click', function(){
-	form__jsBook.classList.toggle('active') 
+	form__jsBook.classList.toggle('active')
+    rectangle__js4.classList.toggle('active')  
 })
 
-rectangle__js4.addEventListener('click', function(){
-	rectangle__js4.classList.toggle('active') 
+const body = document.querySelector('body')
+body.addEventListener('click', function(event){
+    if(!rectangle__js4.classList.contains('active')){
+        return
+    }
+    if(!event.target.closest('.rectangle__js4')){
+        form__jsBook.classList.toggle('active')
+        rectangle__js4.classList.toggle('active') 
+    }
 })
+
+
+
+
 
 const rectangle__js3 = document.querySelector('.rectangle__js3')
 const form__jsBody = document.querySelector('.form__jsBody')
 rectangle__js3.addEventListener('click', function(){
 	form__jsBody.classList.toggle('active') 
-})
-
-rectangle__js3.addEventListener('click', function(){
-	rectangle__js3.classList.toggle('active') 
+    rectangle__js3.classList.toggle('active') 
 })
