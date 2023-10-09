@@ -109,5 +109,9 @@ document.addEventListener("DOMContentLoaded", function(){
             end:"bottom top",
             scrub:true,
         },
+        duration:1,
+        onEnter:function(){
+            console.log("onEnter")
+        }
     })
-})
+}) 
