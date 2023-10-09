@@ -834,3 +834,18 @@ body {
 .quantity_inner .bt_minus {
     border: 1px solid rgba(white,.4);
 }
+
+.information {
+    opacity: 0;
+    transform: translateX(-200px);
+}
+
+.form {
+    opacity: 0;
+    transform: translateX(200px);
+}
+
+.gallery {
+    opacity: 0;
+    transform: translateX(-20%);
+}
