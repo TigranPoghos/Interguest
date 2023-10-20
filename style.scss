@@ -552,6 +552,44 @@ body {
         padding: 0;
     }
 
+    &__option {
+        position: absolute;
+        top: 46px;
+        left: 45px;
+        max-height: 252px;
+        z-index: 2;
+        display: none;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(5, auto);
+        column-gap: 64px;
+
+        & li:first-child {
+            margin-top: 0;
+        }
+
+        & li:nth-child(6) {
+            margin-top: 0;
+        }
+
+        &.active {
+            display: grid;
+        }
+
+        &-item {
+            display: flex;
+            gap: 20px;
+            color: #FFF;
+            font-family: "Roboto Condensed";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 143.187%;
+            letter-spacing: 0.96px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+    }
+
     &__item {
         width: 25%;
         box-sizing: border-box;
@@ -590,6 +628,13 @@ body {
             margin-top: 22px;
         }
 
+        &-size.active {
+            height: 142px;
+            width: 142px;
+            margin-bottom: 28px;
+            z-index: 2;
+        }
+
         &-big {
             width: 74.8%;
             flex-direction: row-reverse;
@@ -597,13 +642,6 @@ body {
             align-items: flex-end;
             background-image: url("../image/standartSngl.jpg");
 
-            & svg:first-child {
-                height: 142px;
-                width: 142px;
-                margin-bottom: 28px;
-                z-index: 2;
-            }
-            
             & div {
                 font-size: 200px;
                 margin-top: 0;

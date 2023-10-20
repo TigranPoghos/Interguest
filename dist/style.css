@@ -481,6 +481,39 @@ body {
 .books__container {
   padding: 0;
 }
+.books__option {
+  position: absolute;
+  top: 46px;
+  left: 45px;
+  max-height: 252px;
+  z-index: 2;
+  display: none;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
+  column-gap: 64px;
+}
+.books__option li:first-child {
+  margin-top: 0;
+}
+.books__option li:nth-child(6) {
+  margin-top: 0;
+}
+.books__option.active {
+  display: grid;
+}
+.books__option-item {
+  display: flex;
+  gap: 20px;
+  color: #FFF;
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143.187%;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
 .books__item {
   width: 25%;
   box-sizing: border-box;
@@ -515,18 +548,18 @@ body {
   text-transform: uppercase;
   margin-top: 22px;
 }
+.books__item-size.active {
+  height: 142px;
+  width: 142px;
+  margin-bottom: 28px;
+  z-index: 2;
+}
 .books__item-big {
   width: 74.8%;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: flex-end;
   background-image: url("../image/standartSngl.jpg");
-}
-.books__item-big svg:first-child {
-  height: 142px;
-  width: 142px;
-  margin-bottom: 28px;
-  z-index: 2;
 }
 .books__item-big div {
   font-size: 200px;
