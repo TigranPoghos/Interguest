@@ -122,7 +122,7 @@ rectangle__js3.addEventListener('click', function(){
 
 
 const books__items = document.querySelector('.books__item')
-
+const books__itemFon = document.querySelector('.books__item-fon')
 // books__items.forEach(books__item, function() {
 //     books__item.addEventListener('click', function(){
 //         books__item.classList.toogle('books__item-big')
@@ -132,6 +132,7 @@ const books__items = document.querySelector('.books__item')
 books__items.addEventListener('click', function(){
 	books__items.classList.toggle('books__item-big')
     $(this).siblings().toggleClass('books__item-little')
+    books__itemFon.classList.toggle('active')
 })
 
 

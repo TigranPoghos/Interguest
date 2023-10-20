@@ -480,16 +480,26 @@ body {
 }
 .books__container {
   padding: 0;
-  position: relative;
 }
 .books__item {
   width: 25%;
   box-sizing: border-box;
-  padding: 8px 30px 8px 30px;
+  padding: 8px 30px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   min-height: 800px;
+  position: relative;
+}
+.books__item-fon {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.books__item-fon.active {
+  display: flex;
 }
 .books__item + .books__item {
   border-left: 1px solid white;
@@ -507,6 +517,23 @@ body {
 }
 .books__item-big {
   width: 74.8%;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-image: url("../image/standartSngl.jpg");
+}
+.books__item-big svg:first-child {
+  height: 142px;
+  width: 142px;
+  margin-bottom: 28px;
+  z-index: 2;
+}
+.books__item-big div {
+  font-size: 200px;
+  margin-top: 0;
+  margin-right: 53px;
+  margin-bottom: -12px;
+  z-index: 2;
 }
 .books__item-little {
   min-width: 161px;

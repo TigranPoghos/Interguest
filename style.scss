@@ -550,17 +550,29 @@ body {
 
     &__container {
         padding: 0;
-        position: relative;
     }
 
     &__item {
         width: 25%;
         box-sizing: border-box;
-        padding: 8px 30px 8px 30px;
+        padding: 8px 30px;
         display: flex;
         flex-direction: column;
         justify-content: end;
         min-height: 800px;
+        position: relative;
+
+        &-fon {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            display: none;
+
+            &.active {
+                display: flex;
+            }
+        }
 
         & + & {
             border-left: 1px solid white;
@@ -580,7 +592,25 @@ body {
 
         &-big {
             width: 74.8%;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: flex-end;
+            background-image: url("../image/standartSngl.jpg");
+
+            & svg:first-child {
+                height: 142px;
+                width: 142px;
+                margin-bottom: 28px;
+                z-index: 2;
+            }
             
+            & div {
+                font-size: 200px;
+                margin-top: 0;
+                margin-right: 53px;
+                margin-bottom: -12px;
+                z-index: 2;
+            }
         }
 
         &-little {
