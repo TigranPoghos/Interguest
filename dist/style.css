@@ -485,7 +485,7 @@ body {
   position: absolute;
   top: 46px;
   left: 45px;
-  max-height: 252px;
+  max-height: 240px;
   z-index: 2;
   display: none;
   grid-auto-flow: column;
@@ -512,7 +512,7 @@ body {
   line-height: 143.187%;
   letter-spacing: 0.96px;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 17px;
 }
 .books__item {
   width: 25%;
