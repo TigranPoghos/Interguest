@@ -508,6 +508,18 @@ body {
 .books__item-big {
   width: 74.8%;
 }
+.books__item-little {
+  min-width: 161px;
+  padding: 28px;
+  box-sizing: border-box;
+  align-items: center;
+  width: 0;
+}
+.books__item-little div {
+  transform: rotate(180deg);
+  margin-top: 20px;
+  writing-mode: vertical-rl;
+}
 
 .services {
   background: #E9EEFC;

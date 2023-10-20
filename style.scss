@@ -582,6 +582,20 @@ body {
             width: 74.8%;
             
         }
+
+        &-little {
+            min-width: 161px;
+            padding: 28px;
+            box-sizing: border-box;
+            align-items: center;
+            width: 0;
+
+            & div {
+                transform: rotate(180deg);
+                margin-top: 20px;
+                writing-mode: vertical-rl;
+            }
+        }
     }
 }
 

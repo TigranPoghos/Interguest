@@ -121,14 +121,18 @@ rectangle__js3.addEventListener('click', function(){
 
 
 
-const books__items = document.querySelectorAll('.books__item')
+const books__items = document.querySelector('.books__item')
 
-books__items.forEach(books__item, function() {
-    books__item.addEventListener('click', function(){
-        books__item.classList.toogle('books__item-big')
-    })
+// books__items.forEach(books__item, function() {
+//     books__item.addEventListener('click', function(){
+//         books__item.classList.toogle('books__item-big')
+//     })
+// })
+
+books__items.addEventListener('click', function(){
+	books__items.classList.toggle('books__item-big')
+    $(this).siblings().toggleClass('books__item-little')
 })
-
 
 
 
