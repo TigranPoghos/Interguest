@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(){
 // Убавляем кол-во по клику
 $('.quantity_inner .bt_minus').click(function() {
     let $input = $(this).parent().find('.quantity')
@@ -115,3 +116,20 @@ rectangle__js3.addEventListener('click', function(){
 //         }
 //     })
 // })
+
+
+
+
+
+const books__items = document.querySelectorAll('.books__item')
+
+books__items.forEach(books__item, function() {
+    books__item.addEventListener('click', function(){
+        books__item.classList.toogle('books__item-big')
+    })
+})
+
+
+
+
+})

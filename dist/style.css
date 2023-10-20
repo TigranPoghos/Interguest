@@ -485,10 +485,11 @@ body {
 .books__item {
   width: 25%;
   box-sizing: border-box;
-  padding: 578px 30px 8px 30px;
+  padding: 8px 30px 8px 30px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  justify-content: end;
+  min-height: 800px;
 }
 .books__item + .books__item {
   border-left: 1px solid white;
@@ -502,10 +503,10 @@ body {
   line-height: normal;
   letter-spacing: 5px;
   text-transform: uppercase;
+  margin-top: 22px;
 }
 .books__item-big {
   width: 74.8%;
-  display: none;
 }
 
 .services {
