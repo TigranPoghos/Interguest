@@ -121,15 +121,22 @@ rectangle__js3.addEventListener('click', function(){
 
 
 
-const books__items = document.querySelector('.books__item')
+let books__items = document.querySelector('.books__item')
 const books__itemFon = document.querySelector('.books__item-fon')
 const books__itemSize = document.querySelector('.books__item-size')
 const books__option = document.querySelector('.books__option')
-// books__items.forEach(books__item, function() {
-//     books__item.addEventListener('click', function(){
-//         books__item.classList.toogle('books__item-big')
-//     })
+
+
+// books__items.forEach(books__item, function(){
+//     books__items.addEventListener('click', function(){
+//         books__items.classList.toggle('books__item-big')
+//         $(this).siblings().toggleClass('books__item-little')
+//         books__itemFon.classList.toggle('active')
+//         books__itemSize.classList.toggle('active')
+//         books__option.classList.toggle('active')
 // })
+// })
+
 
 books__items.addEventListener('click', function(){
 	books__items.classList.toggle('books__item-big')
