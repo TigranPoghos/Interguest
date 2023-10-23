@@ -1,4 +1,38 @@
 document.addEventListener("DOMContentLoaded", function(){
+
+
+
+
+
+
+    // let xml = new XMLHttpRequest()
+    // console.log(xml)
+
+    // xml.open('GET', 'http://127.0.0.1:5500/test.txt')
+    // xml.onreadystatechange = function(){
+    //     console.log(xml.readyState)
+    //     if(xml.readyState === 4){
+    //         alert(xml.response)
+    //     }
+    // }
+    // xml.send()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Убавляем кол-во по клику
 $('.quantity_inner .bt_minus').click(function() {
     let $input = $(this).parent().find('.quantity')
