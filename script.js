@@ -24,14 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-
-
-
-
-
-
-
-
+    
 
 // Убавляем кол-во по клику
 $('.quantity_inner .bt_minus').click(function() {
@@ -156,22 +149,37 @@ rectangle__js3.addEventListener('click', function(){
 
 
 let books__items = document.querySelectorAll('.books__item')
-const books__itemFon = document.querySelector('.books__item-fon')
-const books__itemSize = document.querySelector('.books__item-size')
-const books__option = document.querySelector('.books__option')
+let books__itemFon = document.querySelector('.books__item-fon')
+let books__itemSize = document.querySelector('.books__item-size')
+let books__option = document.querySelector('.books__option')
 
 
 books__items.forEach(books__item => {
     books__item.addEventListener('click', function(){
         books__item.classList.toggle('books__item-big')
         $(this).siblings().toggleClass('books__item-little')
+
+
+        // if (books__items = books__items[0]){
+        //     books__options[0].classList.toggle('active')
+        // } 
+
+
         books__itemFon.classList.toggle('active')
         books__itemSize.classList.toggle('active')
         books__option.classList.toggle('active')
         })
     })
 
-
-
     
 })
+
+// function closeBig(books__item){
+//     books__item.classList.toggle("books__item-big")
+// }
+  
+// document.addEventListener('click', function(event){
+//     if(!books__item.contains(event.target) && books__item.classList.contains('books__item-big')){
+//       closeBig(books__item)
+//     }
+// })
