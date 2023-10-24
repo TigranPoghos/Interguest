@@ -172,6 +172,10 @@ books__items.forEach(books__item => {
     })
 
     
+
+
+
+
 })
 
 // function closeBig(books__item){
@@ -183,3 +187,4 @@ books__items.forEach(books__item => {
 //       closeBig(books__item)
 //     }
 // })
+
