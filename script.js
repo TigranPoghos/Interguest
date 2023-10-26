@@ -158,33 +158,8 @@ books__items.forEach(books__item => {
     books__item.addEventListener('click', function(){
         books__item.classList.toggle('books__item-big')
         $(this).siblings().toggleClass('books__item-little')
-
-
-        // if (books__items = books__items[0]){
-        //     books__options[0].classList.toggle('active')
-        // } 
-
-
-        books__itemFon.classList.toggle('active')
-        books__itemSize.classList.toggle('active')
-        books__option.classList.toggle('active')
         })
     })
-
-    
-
-
-
-
 })
 
-// function closeBig(books__item){
-//     books__item.classList.toggle("books__item-big")
-// }
-  
-// document.addEventListener('click', function(event){
-//     if(!books__item.contains(event.target) && books__item.classList.contains('books__item-big')){
-//       closeBig(books__item)
-//     }
-// })
 
