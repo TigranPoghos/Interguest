@@ -1,30 +1,6 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function(){  
 
 
-
-
-
-
-    // let xml = new XMLHttpRequest()
-    // console.log(xml)
-
-    // xml.open('GET', 'http://127.0.0.1:5500/test.txt')
-    // xml.onreadystatechange = function(){
-    //     console.log(xml.readyState)
-    //     if(xml.readyState === 4){
-    //         alert(xml.response)
-    //     }
-    // }
-    // xml.send()
-
-
-
-
-
-
-
-
-    
 
 // Убавляем кол-во по клику
 $('.quantity_inner .bt_minus').click(function() {
@@ -76,16 +52,58 @@ rectangle__js4.addEventListener('click', function(){
     rectangle__js4.classList.toggle('active')  
 })
 
-const body = document.querySelector('body')
-body.addEventListener('click', function(event){
-    if(!rectangle__js4.classList.contains('active')){
-        return
-    }
-    if(!event.target.closest('.rectangle__js4')){
-        form__jsBook.classList.toggle('active')
-        rectangle__js4.classList.toggle('active') 
+document.addEventListener('click', (e) => {
+    const clickJs4 = e.composedPath().includes(rectangle__js4)
+    const clickJsBook = e.composedPath().includes(form__jsBook)
+
+    if (( !clickJs4 ) && ( !clickJsBook )) {
+        rectangle__js4.classList.remove('active')
+        form__jsBook.classList.remove('active')
     }
 })
+
+const snglBtns = document.querySelectorAll('.sngl__card-button')
+const snglBody = document.querySelector('.sngl__body')
+const snglBack = document.querySelector('sngl__left-back')
+const form__categoryJs = document.querySelector('.form__categoryJs')
+const snglJs = document.querySelector('.snglJs')
+const amountJs = document.querySelector('.amountJs')
+form__categoryJs.addEventListener('click', () => {
+    snglJs.classList.toggle('active')
+    amountJs.classList.toggle('active')
+})
+
+document.addEventListener('click', (e) => {
+    const clickJsCategory = e.composedPath().includes(form__categoryJs)
+    const clickJsSngl = e.composedPath().includes(snglJs)
+    const clickSnglBody = e.composedPath().includes(snglBody)
+
+    if (( !clickJsCategory ) && ( !clickJsSngl ) && (!snglBody)) {
+        form__categoryJs.classList.remove('active')
+        snglJs.classList.remove('active')
+        amountJs.classList.remove('active')
+    }
+})
+
+snglBtns.forEach(snglBtn => {
+    snglBtn.addEventListener('click', () => {
+        snglBody.classList.toggle('active')
+    })
+})
+snglBack.addEventListener('click', () => {
+    snglBody.classList.toggle('active')
+})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,6 +115,17 @@ rectangle__js3.addEventListener('click', function(){
 	form__jsBody.classList.toggle('active') 
     rectangle__js3.classList.toggle('active') 
 })
+
+document.addEventListener('click', (e) => {
+    const clickJs3 = e.composedPath().includes(rectangle__js3)
+    const clickJsBody = e.composedPath().includes(form__jsBody)
+
+    if (( !clickJs3 ) && ( !clickJsBody )) {
+        rectangle__js3.classList.remove('active')
+        form__jsBody.classList.remove('active')
+    }
+})
+
 
 
 
@@ -162,4 +191,25 @@ books__items.forEach(books__item => {
     })
 })
 
+
+
+
+
+
+
+
+
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    spaceBetween: 0,
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
 
