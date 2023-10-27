@@ -388,14 +388,6 @@ body {
   width: 30px;
   height: 32px;
 }
-.form__rectangle:first-child:hover .form__rectangle-svg {
-  transform: rotate(180deg);
-  fill: #E9896B;
-}
-.form__rectangle:nth-child(2):hover .form__rectangle-svg {
-  transform: rotate(180deg);
-  fill: #E9896B;
-}
 .form__rectangle:nth-child(3).active .form__rectangle-svg {
   transform: rotate(180deg);
   fill: #E9896B;

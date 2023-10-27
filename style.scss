@@ -438,15 +438,15 @@ body {
             height: 32px;
         }
 
-        &:first-child:hover &-svg {
-            transform: rotate(180deg);
-            fill: #E9896B;
-        }
+        // &:first-child:hover &-svg {
+        //     transform: rotate(180deg);
+        //     fill: #E9896B;
+        // }
 
-        &:nth-child(2):hover &-svg {
-            transform: rotate(180deg);
-            fill: #E9896B;
-        }
+        // &:nth-child(2):hover &-svg {
+        //     transform: rotate(180deg);
+        //     fill: #E9896B;
+        // }
         
         &:nth-child(3) {
             &.active .form__rectangle-svg {

@@ -191,8 +191,17 @@ books__items.forEach(books__item => {
     books__item.addEventListener('click', function(){
         books__item.classList.toggle('books__item-big')
         $(this).siblings().toggleClass('books__item-little')
+        })
     })
 })
+
+
+
+
+
+
+
+
 
 
 
@@ -206,41 +215,5 @@ var swiper = new Swiper(".mySwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
-})
-
-
-
-new AirDatepicker('#airDatepicker')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
