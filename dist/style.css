@@ -875,12 +875,32 @@ body {
   top: -10px;
   left: -10px;
 }
+.sngl__left-bookMedia {
+  display: flex;
+  padding: 8px 15px;
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E9896B;
+  margin-left: -15px;
+}
+.sngl__left-bookMedia span {
+  color: #FFF;
+  font-family: "Dorsa";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 .sngl__option {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(5, auto);
   column-gap: 63px;
-  margin-top: 50px;
+  padding: 50px 0 40px 0;
   max-width: 503px;
 }
 .sngl__option li:first-child {
@@ -904,6 +924,9 @@ body {
 }
 .sngl__right {
   width: 65.625%;
+}
+.sngl__right .sngl__left-back {
+  display: none;
 }
 
 .quantity_inner * {
@@ -1057,7 +1080,7 @@ body {
     left: auto;
     bottom: 30px;
     right: 31px;
-    z-index: 50;
+    z-index: 10;
   }
   .information__book svg:first-child {
     display: none;
@@ -1170,6 +1193,10 @@ body {
     border-top: 1px solid #293A50;
     border-left: none;
   }
+  .form__book {
+    top: 137%;
+    width: 100%;
+  }
   .form__book-amount {
     margin: 81px 15px 40px 15px;
   }
@@ -1189,188 +1216,96 @@ body {
     margin-top: -1px;
   }
   .sngl {
-    padding: 30px 35px 10px 35px;
-    justify-content: space-between;
-    background: #FFF;
-    box-sizing: border-box;
-    display: none;
-    position: relative;
-  }
-  .sngl.active {
-    display: flex;
+    padding: 0;
+    justify-content: normal;
   }
   .sngl__card {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
     display: none;
-    width: 47.5%;
-    margin-bottom: 30px;
-    position: relative;
   }
   .sngl__card:first-child {
     display: flex;
   }
   .sngl__card img {
-    width: 283px;
-    height: 225px;
-    object-fit: contain;
-    margin-right: 30px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 0;
   }
   .sngl__card-item {
-    display: flex;
-    flex-direction: column;
+    padding: 40px 15px;
   }
   .sngl__card-item span {
-    color: #293A50;
-    font-family: "Roboto Condensed";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 143.187%;
-    letter-spacing: 0.56px;
-    text-transform: uppercase;
-    max-width: 599px;
+    max-width: 286px;
   }
   .sngl__card-item span:first-child {
-    font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .sngl__card-svg {
     display: flex;
-    gap: 15px;
-    margin-top: 40px;
+    gap: 10px;
+    margin-top: 20px;
   }
   .sngl__card-button {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    cursor: pointer;
+    right: 15px;
+    bottom: 214px;
   }
   .sngl__body {
-    position: absolute;
-    display: flex;
-    background-color: #E7EBF9;
     width: 100%;
-    left: 0;
-    top: 274px;
-    display: none;
-  }
-  .sngl__body.active {
-    display: flex;
+    top: 259px;
+    flex-direction: column-reverse;
   }
   .sngl__left {
-    display: flex;
-    flex-direction: column;
-    padding: 24px 0 44px 30px;
-    width: 34.375%;
-    box-sizing: border-box;
+    padding: 80px 15px 0px 15px;
+    width: 100%;
   }
   .sngl__left-back {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    cursor: pointer;
-  }
-  .sngl__left-back span {
-    color: #F26A3F;
-    font-family: "Roboto Condensed";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 143.187%;
-    letter-spacing: 0.96px;
-    text-transform: uppercase;
+    display: none;
+    padding: 15px;
   }
   .sngl__left-line {
-    width: 100%;
-    height: 1px;
-    background: #293A50;
-    margin-top: 23px;
+    display: none;
   }
   .sngl__left-title {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-top: 50px;
+    gap: 10px;
+    margin-top: 0px;
   }
   .sngl__left-title span {
-    color: #293A50;
-    font-family: "Dorsa";
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 3px;
   }
   .sngl__left-subtitle {
-    max-width: 575px;
-    color: #293A50;
-    font-family: "Roboto Condensed";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 143.187%;
-    letter-spacing: 0.56px;
-    text-transform: uppercase;
+    max-width: 345px;
     margin-top: 40px;
   }
   .sngl__left-book {
+    display: none;
+  }
+  .sngl__left-bookMedia {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 28px;
-    position: relative;
-    background-color: #E9896B;
-    border-radius: 50%;
-    width: 190px;
-    height: 190px;
-    margin-right: 67px;
-    margin-left: auto;
-  }
-  .sngl__left-book span {
-    color: #FFF;
-    text-align: center;
-    font-family: "Dorsa";
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-  }
-  .sngl__left-book svg {
-    position: absolute;
-    top: -10px;
-    left: -10px;
   }
   .sngl__option {
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(5, auto);
-    column-gap: 63px;
-    margin-top: 50px;
-    max-width: 503px;
-  }
-  .sngl__option li:first-child {
-    margin-top: 0;
+    grid-template-rows: repeat(9, auto);
+    column-gap: 0px;
+    margin-top: 40px;
+    max-width: 345px;
   }
   .sngl__option li:nth-child(6) {
-    margin-top: 0;
-  }
-  .sngl__option-item {
-    display: flex;
-    gap: 20px;
-    color: #293A50;
-    font-family: "Roboto Condensed";
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 143.187%;
-    letter-spacing: 0.96px;
-    text-transform: uppercase;
     margin-top: 17px;
   }
   .sngl__right {
-    width: 65.625%;
+    width: 100%;
+  }
+  .sngl__right img {
+    width: 375px;
+    height: 290px;
+  }
+  .sngl__right .sngl__left-back {
+    display: flex;
   }
   .books__container {
     padding: 0 15px;
