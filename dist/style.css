@@ -3173,11 +3173,33 @@ body {
     margin-top: 10px;
   }
   .books__item {
-    padding: 8px 20px;
-    min-height: 700px;
+    padding: 20px;
+    min-height: 491px;
   }
   .books__item-text {
     font-size: 90px;
+  }
+  .books__item-fon {
+    height: auto;
+    width: 100%;
+  }
+  .books__item-big .books__item-size {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+  .books__item-big .books__item-text {
+    font-size: 150px;
+    margin-top: 0;
+    letter-spacing: 6px;
+    margin-right: 30px;
+    margin-bottom: -15px;
+    z-index: 2;
+  }
+  .books__option {
+    top: 30px;
+    left: 300px;
   }
   .services__ul-item1 {
     position: absolute;

@@ -3879,12 +3879,40 @@ body {
 
     .books {
         &__item {
-            padding: 8px 20px;
-            min-height: 700px;
+            padding: 20px;
+            min-height: 491px;
 
             &-text {
                 font-size: 90px;
             }
+
+            &-fon {
+                height: auto;
+                width: 100%;
+            }
+
+            &-big {
+                & .books__item-size {
+                    height: 100px;
+                    width: 100px;
+                    margin-bottom: 20px;
+                    z-index: 2;
+                }
+
+                & .books__item-text {
+                    font-size: 150px;
+                    margin-top: 0;
+                    letter-spacing: 6px;
+                    margin-right: 30px;
+                    margin-bottom: -15px;
+                    z-index: 2;
+                }
+            }
+        }
+
+        &__option {
+            top: 30px;
+            left: 300px;
         }
     }
 
