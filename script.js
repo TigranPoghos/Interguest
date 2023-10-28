@@ -44,12 +44,13 @@ burger__svg.addEventListener('click', function(){
 
 
 
-
+const snglJs = document.querySelector('.snglJs')
+const amountJs = document.querySelector('.amountJs')
 const rectangle__js4 = document.querySelector('.rectangle__js4')
 const form__jsBook = document.querySelector('.form__jsBook')
 rectangle__js4.addEventListener('click', function(){
 	form__jsBook.classList.toggle('active')
-    rectangle__js4.classList.toggle('active')  
+    rectangle__js4.classList.toggle('active')
 })
 
 document.addEventListener('click', (e) => {
@@ -65,19 +66,20 @@ document.addEventListener('click', (e) => {
 const snglBtns = document.querySelectorAll('.sngl__card-button')
 const snglBody = document.querySelector('.sngl__body')
 const form__categoryJs = document.querySelector('.form__categoryJs')
-const snglJs = document.querySelector('.snglJs')
-const amountJs = document.querySelector('.amountJs')
 form__categoryJs.addEventListener('click', () => {
     snglJs.classList.toggle('active')
     amountJs.classList.toggle('active')
+    snglBody.classList.toggle('active') // Какого хуя?
 })
 
-const snglBack = document.querySelector('.sngl__left-back')
-snglBack.addEventListener('click', () => {
-    snglBody.classList.remove('active')
-})
+const snglBacks = document.querySelectorAll('.sngl__left-back')
 
-
+snglBacks.forEach(snglBack => {
+    snglBack.addEventListener('click', () => {
+        console.log(snglBody)
+        snglBody.classList.remove('active')
+    })
+}); 
 document.addEventListener('click', (e) => {
     const clickJsCategory = e.composedPath().includes(form__categoryJs)
     const clickJsSngl = e.composedPath().includes(snglJs)
@@ -94,7 +96,7 @@ document.addEventListener('click', (e) => {
 
 snglBtns.forEach(snglBtn => {
     snglBtn.addEventListener('click', () => {
-        snglBody.classList.toggle('active')
+        snglBody.classList.add('active')
     })
 })
 
@@ -191,8 +193,17 @@ books__items.forEach(books__item => {
     books__item.addEventListener('click', function(){
         books__item.classList.toggle('books__item-big')
         $(this).siblings().toggleClass('books__item-little')
+        })
     })
 })
+
+
+
+
+
+
+
+
 
 
 
@@ -206,41 +217,5 @@ var swiper = new Swiper(".mySwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
-})
-
-
-
-new AirDatepicker('#airDatepicker')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 

@@ -64,6 +64,7 @@ document.addEventListener('click', (e) => {
 
 const snglBtns = document.querySelectorAll('.sngl__card-button')
 const snglBody = document.querySelector('.sngl__body')
+console.log(snglBody)
 const form__categoryJs = document.querySelector('.form__categoryJs')
 const snglJs = document.querySelector('.snglJs')
 const amountJs = document.querySelector('.amountJs')
@@ -72,12 +73,16 @@ form__categoryJs.addEventListener('click', () => {
     amountJs.classList.toggle('active')
 })
 
-// const snglBack = document.querySelector('sngl__left-back')
-// snglBack.addEventListener('click', () => {
-//     snglBody.classList.toggle('active')
-// })
+const snglBacks = document.querySelectorAll('.sngl__left-back')
 
+console.log(snglBacks)
 
+snglBacks.forEach(snglBack => {
+    snglBack.addEventListener('click', () => {
+        console.log(snglBody)
+        snglBody.classList.remove('active')
+    })
+}); 
 document.addEventListener('click', (e) => {
     const clickJsCategory = e.composedPath().includes(form__categoryJs)
     const clickJsSngl = e.composedPath().includes(snglJs)
@@ -94,7 +99,7 @@ document.addEventListener('click', (e) => {
 
 snglBtns.forEach(snglBtn => {
     snglBtn.addEventListener('click', () => {
-        snglBody.classList.toggle('active')
+        snglBody.classList.add('active')
     })
 })
 
