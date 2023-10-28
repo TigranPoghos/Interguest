@@ -72,10 +72,10 @@ form__categoryJs.addEventListener('click', () => {
     amountJs.classList.toggle('active')
 })
 
-// const snglBack = document.querySelector('sngl__left-back')
-// snglBack.addEventListener('click', () => {
-//     snglBody.classList.toggle('active')
-// })
+const snglBack = document.querySelector('.sngl__left-back')
+snglBack.addEventListener('click', () => {
+    snglBody.classList.remove('active')
+})
 
 
 document.addEventListener('click', (e) => {

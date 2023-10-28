@@ -980,6 +980,43 @@ body {
     width: 49px;
     height: 40px;
   }
+  .burger__ul {
+    height: calc(100vh - 70px);
+  }
+  .burger__ul-item {
+    display: flex;
+    align-items: center;
+    background-color: #394B64;
+    color: #fff;
+    font-family: "Dorsa";
+    font-size: 99px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 0 15px;
+    border-top: 1px solid #fff;
+    height: 25%;
+    box-sizing: border-box;
+  }
+  .burger__ul-item:hover {
+    background: #E9896B;
+    cursor: pointer;
+  }
+  .burger__svg {
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    padding: 15px 15px;
+    cursor: pointer;
+  }
+  .burger__svg svg {
+    fill: white;
+  }
+  .burger__svg svg:hover {
+    fill: #E9896B;
+  }
   .information__row {
     padding: 112px 0 192px 0;
   }
@@ -1020,7 +1057,7 @@ body {
     left: auto;
     bottom: 30px;
     right: 31px;
-    z-index: 1000;
+    z-index: 50;
   }
   .information__book svg:first-child {
     display: none;
@@ -1073,7 +1110,7 @@ body {
     flex-direction: column;
     display: none;
     position: absolute;
-    top: 100%;
+    top: 126%;
     left: 0;
     width: 100%;
     z-index: 5;
@@ -1133,56 +1170,128 @@ body {
     border-top: 1px solid #293A50;
     border-left: none;
   }
-  .form__book {
+  .form__book-amount {
+    margin: 81px 15px 40px 15px;
+  }
+  .form__book-category {
+    padding: 20px 15px;
+  }
+  .form__book-text {
+    gap: 5px;
+  }
+  .form__book-text span:first-child {
+    font-size: 60px;
+    letter-spacing: 3px;
+  }
+  .form__book-text span:last-child {
+    font-size: 18px;
+    letter-spacing: 0.72px;
+    margin-top: -1px;
+  }
+  .sngl {
+    padding: 30px 35px 10px 35px;
+    justify-content: space-between;
+    background: #FFF;
+    box-sizing: border-box;
+    display: none;
+    position: relative;
+  }
+  .sngl.active {
+    display: flex;
+  }
+  .sngl__card {
+    display: none;
+    width: 47.5%;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .sngl__card:first-child {
+    display: flex;
+  }
+  .sngl__card img {
+    width: 283px;
+    height: 225px;
+    object-fit: contain;
+    margin-right: 30px;
+  }
+  .sngl__card-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .sngl__card-item span {
+    color: #293A50;
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.187%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    max-width: 599px;
+  }
+  .sngl__card-item span:first-child {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .sngl__card-svg {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+  }
+  .sngl__card-button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+  }
+  .sngl__body {
+    position: absolute;
+    display: flex;
+    background-color: #E7EBF9;
     width: 100%;
     left: 0;
+    top: 274px;
+    display: none;
   }
-  .form__book-amount {
+  .sngl__body.active {
+    display: flex;
+  }
+  .sngl__left {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 44px 30px;
+    width: 34.375%;
+    box-sizing: border-box;
+  }
+  .sngl__left-back {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+  }
+  .sngl__left-back span {
+    color: #F26A3F;
+    font-family: "Roboto Condensed";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 143.187%;
     letter-spacing: 0.96px;
     text-transform: uppercase;
-    color: #293A50;
-    font-family: "Roboto Condensed";
-    margin: 59px 32px 30px 32px;
-    display: none;
   }
-  .form__book-amount span:first-child {
-    color: #F26A3F;
+  .sngl__left-line {
+    width: 100%;
+    height: 1px;
+    background: #293A50;
+    margin-top: 23px;
   }
-  .form__book-category {
+  .sngl__left-title {
     display: flex;
-    justify-content: space-between;
-    padding: 22px 30px;
+    gap: 30px;
     align-items: center;
-    border-top: 1px solid #293A50;
+    margin-top: 50px;
   }
-  .form__book-category:last-child {
-    border-bottom: 1px solid #293A50;
-  }
-  .form__book-category:hover {
-    background-color: #E9896B;
-  }
-  .form__book-category:hover .form__book-text span:first-child {
-    color: #FFF;
-  }
-  .form__book-category:hover .form__book-text span:last-child {
-    color: #293A50;
-  }
-  .form__book-category:hover .form__book-svg {
-    fill: #FFF;
-    transform: rotate(270deg);
-  }
-  .form__book-svg {
-    fill: #293A50;
-  }
-  .form__book-text {
-    display: flex;
-    gap: 9px;
-  }
-  .form__book-text span:first-child {
+  .sngl__left-title span {
     color: #293A50;
     font-family: "Dorsa";
     font-size: 100px;
@@ -1192,8 +1301,65 @@ body {
     letter-spacing: 5px;
     text-transform: uppercase;
   }
-  .form__book-text span:last-child {
-    color: #F26A3F;
+  .sngl__left-subtitle {
+    max-width: 575px;
+    color: #293A50;
+    font-family: "Roboto Condensed";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143.187%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+  .sngl__left-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    position: relative;
+    background-color: #E9896B;
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    margin-right: 67px;
+    margin-left: auto;
+  }
+  .sngl__left-book span {
+    color: #FFF;
+    text-align: center;
+    font-family: "Dorsa";
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+  }
+  .sngl__left-book svg {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+  }
+  .sngl__option {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 63px;
+    margin-top: 50px;
+    max-width: 503px;
+  }
+  .sngl__option li:first-child {
+    margin-top: 0;
+  }
+  .sngl__option li:nth-child(6) {
+    margin-top: 0;
+  }
+  .sngl__option-item {
+    display: flex;
+    gap: 20px;
+    color: #293A50;
     font-family: "Roboto Condensed";
     font-size: 24px;
     font-style: normal;
@@ -1201,7 +1367,10 @@ body {
     line-height: 143.187%;
     letter-spacing: 0.96px;
     text-transform: uppercase;
-    margin-top: 7px;
+    margin-top: 17px;
+  }
+  .sngl__right {
+    width: 65.625%;
   }
   .books__container {
     padding: 0 15px;
