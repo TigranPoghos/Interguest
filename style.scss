@@ -839,6 +839,10 @@ body {
         padding-top: 60px;
         padding-bottom: 150px;
         gap: 30px;
+
+        & .swiper-slide {
+            width: inherit;
+        }
     }
 }
 

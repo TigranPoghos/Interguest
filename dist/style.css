@@ -720,6 +720,9 @@ body {
   padding-bottom: 150px;
   gap: 30px;
 }
+.gallery__bottom .swiper-slide {
+  width: inherit;
+}
 
 .sngl {
   width: 100%;

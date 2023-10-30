@@ -103,18 +103,6 @@ snglBtns.forEach(snglBtn => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 const rectangle__js3 = document.querySelector('.rectangle__js3')
 const form__jsBody = document.querySelector('.form__jsBody')
 rectangle__js3.addEventListener('click', function(){
@@ -136,53 +124,6 @@ document.addEventListener('click', (e) => {
 
 
 
-// document.addEventListener("DOMContentLoaded", function(){
-//     // gsap.to(".information",{
-//     //     x:200,
-//     //     y:200,
-//     //     rotate:"360deg",
-//     //     duration:5, //время анимации
-//     //     repeat:true, //повтор
-//     //     yoyo:true, //возращение в изначальное положение обратным действием
-//     //     ease:"ease",//плавность
-//     //     delay:5, //задержка перед анимацией
-//     //     repeatDelay:5 //время для продолжения анимации
-//     // })
-//     let tl = gsap.timeline()
-
-//     tl.to(".information", {
-//         opacity:1,
-//         x:0,
-//         duration:1,
-//     })
-
-//     tl.to(".form", {
-//         opacity:1,
-//         x:0,
-//         duration:1,
-//     }, "-=1")
-
-//     gsap.to(".gallery",{
-//         opacity:1,
-//         x:0,
-//         scrollTrigger:{
-//             trigger: ".gallery",
-//             markers:true,
-//             start:"top bottom",
-//             end:"bottom top",
-//             scrub:true,
-//         },
-//         duration:1,
-//         onEnter:function(){
-//             console.log("onEnter")
-//         }
-//     })
-// })
-
-
-
-
-
 let books__items = document.querySelectorAll('.books__item')
 let books__itemFon = document.querySelector('.books__item-fon')
 let books__itemSize = document.querySelector('.books__item-size')
@@ -193,9 +134,92 @@ books__items.forEach(books__item => {
     books__item.addEventListener('click', function(){
         books__item.classList.toggle('books__item-big')
         $(this).siblings().toggleClass('books__item-little')
-        })
     })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+gsap.to(".header", {
+    x:200,
+    duration:5,
+})
+
+
+
+// gsap.to(".information",{
+//     x:200,
+//     y:200,
+//     rotate:"360deg",
+//     duration:5, //время анимации
+//     repeat:true, //повтор
+//     yoyo:true, //возращение в изначальное положение обратным действием
+//     ease:"ease",//плавность
+//     delay:5, //задержка перед анимацией
+//     repeatDelay:5 //время для продолжения анимации
+// })
+
+// let tl = gsap.timeline()
+
+// tl.to(".information", {
+//     opacity:1,
+//     x:0,
+//     duration:1,
+// })
+
+// tl.to(".form", {
+//     opacity:1,
+//     x:0,
+//     duration:1,
+// }, "-=1")
+
+// gsap.to(".gallery",{
+//     opacity:1,
+//     x:0,
+//     scrollTrigger:{
+//         trigger: ".gallery",
+//         markers:true,
+//         start:"top bottom",
+//         end:"bottom top",
+//         scrub:true,
+//     },
+//     duration:1,
+//     onEnter:function(){
+//         console.log("onEnter")
+//     }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -216,6 +240,22 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
+    },   
 });
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
 
