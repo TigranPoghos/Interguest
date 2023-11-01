@@ -32,6 +32,29 @@ $('.quantity_inner .quantity').bind("change keyup input click", function() {
 
 
 
+gsap.to(".gallery",{
+    opacity:1,
+    x:0,
+    scrollTrigger:{
+        trigger: ".gallery",
+        markers:true,
+        start:"top bottom",
+        end:"bottom top",
+        scrub:true,
+    },
+    duration:1,
+    onEnter:function(){
+        console.log("onEnter")
+    }
+})
+
+
+
+
+
+
+
+
 const burger__js = document.querySelector('.burger__js')
 const burger__jsBody = document.querySelector('.burger__jsBody')
 burger__js.addEventListener('click', function(){
@@ -69,14 +92,13 @@ const form__categoryJs = document.querySelector('.form__categoryJs')
 form__categoryJs.addEventListener('click', () => {
     snglJs.classList.toggle('active')
     amountJs.classList.toggle('active')
-    snglBody.classList.toggle('active') // Какого хуя?
+    snglBody.classList.toggle('active')
 })
 
 const snglBacks = document.querySelectorAll('.sngl__left-back')
 
 snglBacks.forEach(snglBack => {
     snglBack.addEventListener('click', () => {
-        console.log(snglBody)
         snglBody.classList.remove('active')
     })
 }); 
@@ -131,29 +153,29 @@ let books__option = document.querySelector('.books__option')
 
 
 books__items.forEach(books__item => {
-    books__item.addEventListener('click', function(){
+    books__item.addEventListener('click', function books(){
         books__item.classList.toggle('books__item-big')
         $(this).siblings().toggleClass('books__item-little')
     })
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-gsap.to(".header", {
-    x:200,
-    duration:5,
+window.addEventListener('resize', function(event) {
+    const viewport_width = Math.max(this.document.documentElement.clientWidth, window.innerWidth || 0)
+    if (viewport_width < 1366) {
+        books()
+    }
 })
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -198,10 +220,6 @@ gsap.to(".header", {
 //         console.log("onEnter")
 //     }
 // })
-
-
-
-
 
 
 
