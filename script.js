@@ -32,27 +32,6 @@ $('.quantity_inner .quantity').bind("change keyup input click", function() {
 
 
 
-gsap.to(".gallery",{
-    opacity:1,
-    x:0,
-    scrollTrigger:{
-        trigger: ".gallery",
-        markers:true,
-        start:"top bottom",
-        end:"bottom top",
-        scrub:true,
-    },
-    duration:1,
-    onEnter:function(){
-        console.log("onEnter")
-    }
-})
-
-
-
-
-
-
 
 
 const burger__js = document.querySelector('.burger__js')

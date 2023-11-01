@@ -697,7 +697,6 @@ body {
 .gallery {
   background: #E9EEFC;
   overflow: hidden;
-  opacity: 0;
 }
 .gallery__row {
   flex-direction: column;
